@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import moment from "moment";
 
 const PostSummary = ({ post }) => {
   return (
@@ -8,8 +9,8 @@ const PostSummary = ({ post }) => {
         <Link to={"/postdetail/" + post.id}>
           <span className="card-title">{post.title}</span>
         </Link>
-        <p>Posted By Pludo</p>
-        <p>May, 4, 2020</p>
+        <p>Posted By {post.authorFirstName} </p>
+        <p>{moment(post.createdAt.toDate()).calendar()}</p>
       </div>
     </div>
   );

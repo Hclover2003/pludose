@@ -1,14 +1,33 @@
 html {
   min-height: 100%;
 }
-
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+​.pluFooter {
+  width: 100%;
+  height: 400px;
+  background-image: url("./img/galaxy2.jpg");
+  background-size: 100% 100%;
+}
+#rcorners {
+  border-radius: 25px;
+  background: #73ad21;
+  padding: 20px;
+  width: 200px;
+  height: 150px;
+}
+.public-DraftEditor-content {
+  background: #fff;
+  border: 1px solid rgb(217, 171, 223);
+  border-radius: 20px;
+  top: 50px;
+  bottom: 50px;
+  right: 20px;
+  position: sticky;
+  padding: 10px;
+  left: 4px;
+}
+div.card.submissions {
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 img.bg {
   /* Set rules to fill background */
@@ -48,6 +67,9 @@ input[type="checkbox"] {
 form {
   padding: 20px;
   margin-top: 60px;
+}
+.mypadding {
+  padding: 20px;
 }
 
 input[type="text"]:not(.browser-default):focus:not([readonly]),
