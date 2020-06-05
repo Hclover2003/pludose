@@ -1,5 +1,5 @@
 import React from "react";
-import PostSummary from "./PostSummary";
+import PostSummary from "./PostSummary.jsx";
 
 const PostList = ({ posts }) => {
   return (

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
+import M from "materialize-css";
 import { NavLink } from "react-router-dom";
 import { signOut } from "../../store/actions/authActions";
 import { connect } from "react-redux";
 
 const SignedInLinks = (props) => {
   const { profile } = props;
+  useEffect(() => {
+    let elements = document.querySelectorAll(".dropdown-trigger");
+    M.Dropdown.init(elements);
+  }, []);
   return (
     <ul className="right">
       <li>
@@ -16,14 +21,26 @@ const SignedInLinks = (props) => {
       <li>
         <NavLink to="/createpost">Create Post</NavLink>
       </li>
+
       <li>
-        <a onClick={props.signOut}>Log Out</a>
-      </li>
-      <li>
-        <NavLink to="/" className="btn btn-floating pink lighten-1">
+        <a className="dropdown-trigger btn" data-target="dropdown1">
           {profile.initials}
-        </NavLink>
+        </a>
       </li>
+      <ul id="dropdown1" class="dropdown-content">
+        <li>
+          <NavLink to="/profile">Profile</NavLink>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+        <li>
+          <a href="#!">Settings</a>
+        </li>
+        <li class="divider" tabindex="-1"></li>
+
+        <li>
+          <a onClick={props.signOut}>Log Out</a>
+        </li>
+      </ul>
     </ul>
   );
 };

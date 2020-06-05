@@ -7,7 +7,7 @@ import {
   usersWhoUnliked,
   deleteComment,
 } from "../../store/actions/commentActions";
-import ReplyBox from "./ReplyBox";
+import ReplyBox from "./ReplyBox.jsx";
 import { connect } from "react-redux";
 
 const CommentDetails = (props) => {

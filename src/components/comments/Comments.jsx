@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { firestoreConnect } from "react-redux-firebase";
 import { compose } from "redux";
-import CommentDetails from "./CommentDetails";
+import CommentDetails from "./CommentDetails.jsx";
 
 const Comments = (props) => {
   const comment = props.comment;

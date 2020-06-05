@@ -1,17 +1,18 @@
 import React, { Component } from "react";
-import Todos from "./components/todos/Todos";
-import Dashboard from "./components/dashboard/Dashboard";
-import Navbar from "./components/layout/Navbar";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import PostDetail from "./components/posts/PostDetail";
-import SignIn from "./components/auth/SignIn";
-import Submissions from "./components/information/Submissions";
-import SignUp from "./components/auth/SignUp";
-import CreatePost from "./components/createpost/CreatePost";
-import AboutUs from "./components/information/AboutUs";
+
 import galaxy3 from "./img/galaxy3.jpg";
-import Footer from "./components/footer/Footer";
-import Loading from "./components/layout/Loading";
+
+import Dashboard from "./components/dashboard/Dashboard.jsx";
+import Navbar from "./components/layout/Navbar.jsx";
+import PostDetail from "./components/posts/PostDetail.jsx";
+import SignIn from "./components/auth/SignIn.jsx";
+import Submissions from "./components/information/Submissions.jsx";
+import SignUp from "./components/auth/SignUp.jsx";
+import CreatePost from "./components/createpost/CreatePost.jsx";
+import AboutUs from "./components/information/AboutUs.jsx";
+import Footer from "./components/footer/Footer.jsx";
+import Profile from "./components/profile/Profile.jsx";
 
 class App extends Component {
   render() {
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/submissions" component={Submissions} />
             <Route path="/aboutus" component={AboutUs} />
             <Route path="/createpost" component={CreatePost} />
+            <Route path="/profile" component={Profile} />
           </Switch>
           <Footer />
         </div>

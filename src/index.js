@@ -9,7 +9,7 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { useSelector } from "react-redux";
 import { isLoaded } from "react-redux-firebase";
-import Loading from "./components/layout/Loading";
+import Loading from "./components/layout/Loading.jsx";
 
 import {
   createFirestoreInstance,
